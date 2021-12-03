@@ -69,3 +69,10 @@ In `package.json` create a new script `"prepare": "husky install"`
 - npx husky add .husky/pre-commit "npm run lint-staged npm run validate"
 
 This will create a new directory `.husky` and we have our `pre-commit` where we can specify what script should be ran before the commit takes place. In our case `npm run lint-staged npm run validate`. After this we can remove the `prepare` script from `package.json`
+
+To test it out we can commit the changes.
+
+```
+git add .
+git commit -m "Testing pre-commit script"
+```

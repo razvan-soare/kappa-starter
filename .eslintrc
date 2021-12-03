@@ -1,0 +1,151 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "jsx-a11y", "react", "react-hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-airbnb",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "rules": {
+    "consistent-return": 2, // remove if it gets annoying
+    "indent": [1, 2, { "SwitchCase": 1 }],
+    "no-else-return": 1,
+    "semi": [1, "always"],
+    "no-extra-semi": 1,
+    "space-unary-ops": 2,
+    "no-console": [
+      1,
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "func-names": 0,
+    "no-multiple-empty-lines": [1, { "max": 1 }],
+    "no-useless-escape": 1,
+    "no-unsafe-optional-chaining": 0,
+    "no-nonoctal-decimal-escape": 0,
+    "arrow-body-style": [2, "as-needed"],
+    "eol-last": 1,
+
+    // typescript
+    "@typescript-eslint/quotes": [2, "double"],
+
+    // "jsx-a11y/img-has-alt": 1,
+    "jsx-a11y/label-has-for": 1,
+    "jsx-quotes": [2, "prefer-double"],
+
+    "keyword-spacing": 1,
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-alert": 1,
+    "no-confusing-arrow": 0,
+    "no-continue": 1,
+    "no-debugger": 1,
+    "no-lonely-if": 1,
+    "no-plusplus": 0,
+    "no-use-before-define": 0,
+    "no-var": 2,
+    "no-mixed-operators": 1,
+    "object-property-newline": 1,
+    "prefer-arrow-callback": 1,
+    "prefer-const": 1,
+    "quote-props": 0,
+    "spaced-comment": 1,
+    "padded-blocks": 1,
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": false,
+        "natural": false
+      }
+    ],
+    "sort-vars": [
+      "error",
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/react-in-jsx-scope": 0 // In React 17 you no longer need to import react when writing JSX
+    // "react/default-props-match-prop-types": 0,
+    // "react/forbid-prop-types": 0,
+    // "react/jsx-filename-extension": 0,
+    // "react/jsx-first-prop-new-line": [2, "multiline"],
+    // "react/jsx-indent": [1, 2],
+    // "react/jsx-indent-props": [1, 2],
+    // "react/jsx-key": 2,
+    // "react/jsx-max-props-per-line": [
+    //   1,
+    //   {
+    //     "maximum": 1
+    //   }
+    // ],
+    // "react/jsx-no-bind": 0,
+    // "react/jsx-no-literals": 0,
+    // "react/jsx-no-target-blank": 1,
+    // "react/jsx-sort-props": [
+    //   2,
+    //   {
+    //     "ignoreCase": true
+    //   }
+    // ],
+
+    // "react/no-array-index-key": 0,
+    // "react/no-deprecated": 2,
+    // "react/no-direct-mutation-state": 2,
+    // "react/no-find-dom-node": 1,
+    // "react/no-multi-comp": 2,
+    // "react/no-string-refs": 1,
+    // "react/no-unescaped-entities": 1,
+    // "react/no-unused-prop-types": 1,
+    // "react/prefer-stateless-function": 1,
+    // "react/prop-types": 2,
+    // "react/require-default-props": 0,
+    // "react/self-closing-comp": 1,
+    // "react/sort-comp": [
+    //   2,
+    //   {
+    //     "order": ["static-methods", "lifecycle", "everything-else", "render"]
+    //   }
+    // ]
+  },
+  "settings": {
+    "import/resolve": {
+      "moduleDirectory": ["node_modules"]
+    }
+  },
+  "globals": {
+    "Cypress": true,
+    "cy": true,
+    "jest": true,
+    "it": true,
+    "expect": true,
+    "describe": true,
+    "before": true,
+    "beforeEach": true,
+    "beforeAll": true,
+    "context": true,
+    "after": true,
+    "afterAll": true,
+    "afterEach": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

@@ -195,19 +195,3 @@ We can install `jest-watch-select-projects` and add `watchPlugins: ['jest-watch-
 ```
 npm install --save-dev jest-watch-select-projects
 ```
-
-We can install a little extension that will help us filtering and using patterns during jest watch
-
-```
-npm install --save-dev jest-watch-typeahead
-```
-
-And add inside `watchPlugins` in `jest-common.js`
-
-```
-watchPlugins: [
-  'jest-watch-select-projects',
-  'jest-watch-typeahead/filename',
-  'jest-watch-typeahead/testname',
-]
-```

@@ -188,47 +188,13 @@ With the `baseUrl` setting we can import the button from `index.tsx` as
 import Button from 'components/button';
 ```
 
-### Jest running lint
+### Jest watch config
 
-Jest is an amzing tool that can take care of your tests but on top of that can run many more things. For example your eslint
-
-```
-npm install --save-dev jest-runner-eslint
-```
-
-Create a new file in the test directory called `jest.lint.js`. In order for jest to run the lint tests together we need to add the new scripti into `jest.config.js` under the `projects`
-
-```
-projects: [
-  "./test/jest.lint.js",
-  "./test/jest.client.js",
-  "./test/jest.server.js",
-],
-```
-
-One last step, inside `package.json` add a new config for `jest-runner-eslint` that will ignore the files that we dont want to run linting one
-
-```
-"jest-runner-eslint": {
-  "cliOptions": {
-    "ignorePath": "./.gitignore"
-  }
-},
-```
-
-In addition we could change our lint script to run with jest
-
-```
-"lint": "jest --config test/jest.lint.js",
-```
-
-Now we can install `jest-watch-select-projects` and add `watchPlugins: ['jest-watch-select-projects']` to the `jest-common.js` in order for jest watch to give us another option. During watch mode will be able to access it by pressing `P`
+We can install `jest-watch-select-projects` and add `watchPlugins: ['jest-watch-select-projects']` to the `jest-common.js` in order for jest watch to give us another option. During watch mode will be able to access it by pressing `P`
 
 ```
 npm install --save-dev jest-watch-select-projects
 ```
-
-### Jest type-ahead
 
 We can install a little extension that will help us filtering and using patterns during jest watch
 

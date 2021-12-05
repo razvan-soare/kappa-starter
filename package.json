@@ -26,8 +26,9 @@
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "check-types": "tsc",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "lint:with-jest": "jest --config test/jest.lint.js",
     "lint:fix": "npm run lint -- --fix ",
-    "validate": "npm-run-all --parallel check-types test",
+    "validate": "npm-run-all --parallel check-types test:coverage",
     "lint-staged": "lint-staged"
   },
   "eslintConfig": {
@@ -35,6 +36,11 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest-runner-eslint": {
+    "cliOptions": {
+      "ignorePath": "./.gitignore"
+    }
   },
   "browserslist": {
     "production": [
@@ -63,6 +69,9 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
+    "jest-runner-eslint": "^1.0.0",
+    "jest-watch-select-projects": "^2.0.0",
+    "jest-watch-typeahead": "^1.0.0",
     "lint-staged": "^12.1.2",
     "npm-run-all": "^4.1.5"
   }

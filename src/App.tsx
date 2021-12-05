@@ -1,11 +1,13 @@
+import Button from "components/button";
 import { ReactComponent as Logo } from "./logo.svg";
 import "./App.css";
 
-const App = function (): JSX.Element {
+const App = function(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
         <Logo />
+        <Button />
         <p>
           Edit
           {" "}

@@ -147,3 +147,22 @@ Some file can also be ignored using:
   "./src/index.tsx"
 ],
 ```
+
+### Absolute path
+
+Creating an absolute path to access our components is as simple as setting in our `tsconfig.json` the property `"baseUrl": "./src"`. This will let Typescript know that some imports might come from `.src`. This will help when we need to reference some `utils` functions or the shared components from diferent nested files. We don't need to worry about setting the right path and having that huge chain of `../../../../😢.jsx`.
+
+For example if we have
+
+```
+src
+- components
+- - button.tsx
+index.tsx
+```
+
+With the `baseUrl` setting we can import the button from `index.tsx` as
+
+```
+import Button from 'components/button';
+```

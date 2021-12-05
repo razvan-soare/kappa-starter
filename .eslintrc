@@ -33,7 +33,8 @@
 
     // typescript
     "@typescript-eslint/quotes": [2, "double"],
-
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/space-before-function-paren": ["error", "never"],
     // "jsx-a11y/img-has-alt": 1,
     "jsx-a11y/label-has-for": 1,
     "jsx-quotes": [2, "prefer-double"],

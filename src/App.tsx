@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
+import { ReactComponent as Logo } from "./logo.svg";
 import "./App.css";
 
 const App = function (): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo />
         <p>
           Edit
           {" "}

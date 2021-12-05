@@ -147,3 +147,28 @@ Some file can also be ignored using:
   "./src/index.tsx"
 ],
 ```
+
+### Better control using jest
+
+If we want to add custom config files we need to intall jest directly (instead of using the react-script)
+
+```
+npm install --save-dev @emotion/react @emotion/babel-preset-css-prop @babel/preset-typescript @babel/preset-env identity-obj-proxy
+```
+
+This will provide us with more control over the files that we are testing. Using directly Jest we are able to create 2 configs, first for normal tests that require the JestDom and the second for server tests (functions that can be ran using only node).
+
+For this we will need to add a directory `test` and add the following files
+
+- `jest-common.js` - will hold the shared settings between the configs
+- `jest.client.js` - all the settings for client side
+- `jest.server.js` - all the settings for server side
+- `jest.svg.jsx` - a little workaround to help jest render the svgs
+- `style-mock.js` - mock file for styles (it will be returned when we import css files)
+
+Create a `.babelrc.js` file that will help jest render the typescript elements
+And finally we need `jest.config.js`. We can add the custom settings for jest like `coverage` and will also provide the client/server settings.
+
+### Absolute path
+
+// https://medium.com/@mikecripps/absolute-imports-with-create-react-app-d70fb65ea012

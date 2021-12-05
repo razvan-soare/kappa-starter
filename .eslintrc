@@ -23,6 +23,7 @@
         "allow": ["warn", "error"]
       }
     ],
+    "global-require": 0,
     "func-names": 0,
     "no-multiple-empty-lines": [1, { "max": 1 }],
     "no-useless-escape": 1,
@@ -33,7 +34,7 @@
 
     // typescript
     "@typescript-eslint/quotes": [2, "double"],
-
+    "@typescript-eslint/no-var-requires": 0,
     // "jsx-a11y/img-has-alt": 1,
     "jsx-a11y/label-has-for": 1,
     "jsx-quotes": [2, "prefer-double"],
@@ -63,20 +64,15 @@
     "quote-props": 0,
     "spaced-comment": 1,
     "padded-blocks": 1,
-    "sort-keys": [
-      "error",
-      "asc",
-      {
-        "caseSensitive": false,
-        "natural": false
-      }
-    ],
+    "sort-keys": 0,
     "sort-vars": [
       "error",
       {
         "ignoreCase": true
       }
     ],
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/react-in-jsx-scope": 0 // In React 17 you no longer need to import react when writing JSX
     // "react/default-props-match-prop-types": 0,
     // "react/forbid-prop-types": 0,
@@ -130,6 +126,7 @@
     "cy": true,
     "jest": true,
     "it": true,
+    "test": true,
     "expect": true,
     "describe": true,
     "before": true,

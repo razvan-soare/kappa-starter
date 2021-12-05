@@ -3,7 +3,6 @@ import { ReactComponent as Logo } from "./logo.svg";
 import "./App.css";
 
 const App = function(): JSX.Element {
-  const a = 1;
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +10,6 @@ const App = function(): JSX.Element {
         <Button />
         <p>
           Edit
-          {" "}
-          {a}
           {" "}
           <code>src/App.tsx</code>
           {" "}
